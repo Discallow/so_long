@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: discallow <discallow@student.42.fr>        +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 18:36:35 by discallow         #+#    #+#             */
-/*   Updated: 2024/06/11 18:36:59 by discallow        ###   ########.fr       */
+/*   Updated: 2024/06/16 06:18:42 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ void	init_struct(t_game *game)
 	game->floor.y = 0;
 }
 
+// This function is calling strcmp2, to make sure that the extension is .ber
 void	check_extension(char *file)
 {
 	if (ft_strcmp2(file, "ber") == 0)

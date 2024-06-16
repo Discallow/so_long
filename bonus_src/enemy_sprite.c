@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   enemy_sprite.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: discallow <discallow@student.42.fr>        +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 18:30:02 by discallow         #+#    #+#             */
-/*   Updated: 2024/06/13 15:52:40 by discallow        ###   ########.fr       */
+/*   Updated: 2024/06/16 06:18:35 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	put_enemy_on_window(t_game *game)
 	}
 	mlx_destroy_image(game->connection, game->enemy.img);
 }
-
+// This is going to constantly change image and put that different image in the window.
 void	get_enemy_sprite(t_game *game, int i)
 {
 	if (i == 0)
@@ -45,7 +45,7 @@ void	get_enemy_sprite(t_game *game, int i)
 	else
 		game->enemy.path = "textures/magikarp_02.xpm";
 }
-
+// This function is constantly called by mlx_loop_hook and time value will constantly update to change the image
 int	enemy_sprite(t_game *game)
 {
 	static float	time = 0;

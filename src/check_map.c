@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_map.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: discallow <discallow@student.42.fr>        +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 20:32:54 by discallow         #+#    #+#             */
-/*   Updated: 2024/06/15 00:36:42 by discallow        ###   ########.fr       */
+/*   Updated: 2024/06/16 06:18:32 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ void	open_file(t_game *game, char *file)
 		exit (1);
 	}
 }
-
+// 
 void	build_map_read_borders(t_game *game, char *file)
 {
 	char	*line;

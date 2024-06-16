@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_map_2.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: discallow <discallow@student.42.fr>        +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 18:56:52 by discallow         #+#    #+#             */
-/*   Updated: 2024/06/13 14:26:34 by discallow        ###   ########.fr       */
+/*   Updated: 2024/06/16 06:18:37 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	check_valid_line(char *line, int line_size, t_game *game)
 		}
 	}
 }
-
+// I want to read the file the first time to check how many lines and columns do I need to allocate
 void	read_file(t_game *game)
 {
 	char	*line;
@@ -48,7 +48,7 @@ void	read_file(t_game *game)
 		game->y++;
 	}
 }
-
+// This second time is to put the info of the file to previous allocated 2D array map.
 void	read_file_again(char *line, t_game *game, char *str, size_t total_len)
 {
 	while (1)
@@ -63,7 +63,7 @@ void	read_file_again(char *line, t_game *game, char *str, size_t total_len)
 		free(line);
 	}
 }
-
+// Checking the borders, since all of them needs to be set as '1'
 void	check_first_last_line(char *line, t_game *game)
 {
 	int	i;
@@ -81,7 +81,7 @@ void	check_first_last_line(char *line, t_game *game)
 		i++;
 	}
 }
-
+// Checking the other lines, since the first and last column needs to be set as '1'
 void	check_middle_lines(t_game *game)
 {
 	int	i;

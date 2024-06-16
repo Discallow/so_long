@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   player_moves.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: discallow <discallow@student.42.fr>        +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 20:23:57 by discallow         #+#    #+#             */
-/*   Updated: 2024/06/15 01:15:47 by discallow        ###   ########.fr       */
+/*   Updated: 2024/06/16 06:18:28 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long_bonus.h"
-
+// Before updating the value of collectibles or movements, I'm putting in the window the same number but as black, to "erase" the old one
 void	count_movements(t_game *game)
 {
 	char		*str;

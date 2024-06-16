@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   textures_utils.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: discallow <discallow@student.42.fr>        +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 15:53:18 by discallow         #+#    #+#             */
-/*   Updated: 2024/06/15 00:57:02 by discallow        ###   ########.fr       */
+/*   Updated: 2024/06/16 06:18:31 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long_bonus.h"
 
+// before moving the player or changing the exit, this is going to be the first path to the xpm files
 void	get_path(t_game *game)
 {
 	game->collectable.path = "textures/pokeball.xpm";
@@ -20,7 +21,8 @@ void	get_path(t_game *game)
 	game->player.path = "textures/ash_down.xpm";
 	game->exit.path = "textures/grass.xpm";
 }
-
+/* This function is checking all the images,
+to make sure that they're valid and no error occurs while converting them from xpm to image*/
 void	*check_image(t_game *game, void *image, char *path)
 {
 	int	width;
@@ -54,6 +56,7 @@ void	xpm_to_image(t_game *game)
 	game->exit.img = check_image(game, game->exit.img, game->exit.path);
 }
 
+// After checking the images, I'm putting them in the respective x and y of the 2D array map
 void	put_images_to_window(t_game *game, int i, int j)
 {
 	if (game->map[i][j] == '1')

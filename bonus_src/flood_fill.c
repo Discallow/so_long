@@ -3,12 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   flood_fill.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: discallow <discallow@student.42.fr>        +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/07 16:19:51 by discallow         #+#    #+#             */
-/*   Updated: 2024/06/15 01:09:49 by discallow        ###   ########.fr       */
+/*   Updated: 2024/06/16 06:18:40 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*I chose an iterative flood fill instead of a recursive one.
+I found this aproach better since in a large map, I would get a stack overflow because of the recursive call.
+This can also be a bit slow, I found that the best approach would be a queue.
+In bonus, I also assume that the enemies are walls, since I can't get past through them.*/
 
 #include "../so_long_bonus.h"
 

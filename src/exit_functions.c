@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   exit_functions.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: discallow <discallow@student.42.fr>        +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 19:31:31 by discallow         #+#    #+#             */
-/*   Updated: 2024/06/11 18:30:23 by discallow        ###   ########.fr       */
+/*   Updated: 2024/06/16 06:18:38 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	invalid_map(t_game *game)
 	free_map(game->copy.map);
 	exit(1);
 }
-
+// After winning the game, you want to destroy/free all the memory allocated by mlx functions
 void	end_game(t_game *game)
 {
 	count_movements();
