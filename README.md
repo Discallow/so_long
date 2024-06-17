@@ -57,7 +57,7 @@ A valid map file has the .ber extension and follows specific formatting rules, s
 
 - Ending game:
 
-![Game Screenshot](maps/images/game_ending_without_bonus.png)
+![Game Screenshot](maps/images/game_finished_without_bonus.png)
 
 ## 🏅 Bonus Features
 - Implementation of static enemy patrols and 3 sprites as well for the enemies.
@@ -80,7 +80,7 @@ make bonus
 
 - Ending game:
 
-![Game Screenshot](maps/images/game_ending_with_bonus.png)
+![Game Screenshot](maps/images/game_finished_with_bonus.png)
 
 ## 🏷 Credits
 This project is part of the 42 school curriculum. It was developed using the MiniLibX library. Special thanks to the 42 community for their support and resources.
