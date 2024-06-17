@@ -5,7 +5,7 @@
 	This project helped you? Give it a 🌟!
 </p>
 
-##  🕹️ General information
+## 🕹️ General information
 Bonus included.</br>
 A complete and straightforward implementation of So Long 42 project.</br>
 
@@ -23,9 +23,7 @@ The project is implemented using the MiniLibX library, which provides simple fun
 
 ## 🎛️ Features
 - 32-frame tiles animations for movements in all four directions.
-- A move counter displayed below the game scene.
-- Implementation of static enemy patrols.
-- End-game screens for both victory ("You win") and defeat ("Game Over").
+- A move counter displayed in the terminal.
 - 2D game map
 - Collectibles
 
@@ -33,20 +31,38 @@ The project is implemented using the MiniLibX library, which provides simple fun
 To run the game, execute the compiled binary with a map file as an argument:
 
 ```sh
-./so_long map.ber
+make
+./so_long maps/*.ber
 ```
-You can create your own maps or use the sample maps provided in the maps directory. A valid map file has the .ber extension and follows specific formatting rules.
+You can create your own maps or use the sample maps provided in the maps directory.
+A valid map file has the .ber extension and follows specific formatting rules, such as:
+- The map must contain 1 exit, at least 1 collectible, and 1 starting position to be valid.
+- The map must be rectangular.
+- The map must be closed/surrounded by walls. If it’s not, the program must return an error.
+- You have to check if there’s a valid path in the map (`flood fill` algorithm).
+- You must be able to parse any kind of map, as long as it respects the above rules.
 
 Controls
-`W`: Move up
-`A`: Move left
-`S`: Move down
-`D`: Move right
+`W` or `↑`: Move up
+`A` or `←`: Move left
+`S` or `↓`: Move down
+`D` or `→`: Move right
 `ESC`: Exit the game
 
-Bonus
+## 🏅 Bonus Features
+- Implementation of static enemy patrols and 3 sprites as well for the enemies.
+- A move counter and number of caught collectibles above the game screen.
+- Player loses if they touch the static enemy.
 
-Credits
+## Usage
+
+To run the game with the above mentioned bonuses, execute the compiled binary with a map file as an argument:
+```sh
+make bonus
+./so_long_bonus maps/*.ber
+```
+
+## 🏷 Credits
 This project is part of the 42 school curriculum. It was developed using the MiniLibX library. Special thanks to the 42 community for their support and resources.
 
-For more information about the project requirements, visit the 42 Project Page.
+For more information about the project requirements, visit the 42 Project Page, since this subject could change.
