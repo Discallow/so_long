@@ -42,12 +42,22 @@ A valid map file has the .ber extension and follows specific formatting rules, s
 - You have to check if there’s a valid path in the map (`flood fill` algorithm).
 - You must be able to parse any kind of map, as long as it respects the above rules.
 
-Controls
-`W` or `↑`: Move up
-`A` or `←`: Move left
-`S` or `↓`: Move down
-`D` or `→`: Move right
-`ESC`: Exit the game
+## Controls
+- `W` or `↑`: Move up
+- `A` or `←`: Move left
+- `S` or `↓`: Move down
+- `D` or `→`: Move right
+- `ESC`: Exit the game
+
+## Map example
+
+- Starting game:
+
+![Game Screenshot](so_long/maps/images/game_starting_without_bonus.png)
+
+- Ending game:
+
+![Game Screenshot](so_long/maps/images/game_ending_without_bonus.png)
 
 ## 🏅 Bonus Features
 - Implementation of static enemy patrols and 3 sprites as well for the enemies.
@@ -61,6 +71,16 @@ To run the game with the above mentioned bonuses, execute the compiled binary wi
 make bonus
 ./so_long_bonus maps/*.ber
 ```
+
+## Map example
+
+- Starting game:
+
+![Game Screenshot](so_long/maps/images/game_starting_with_bonus.png)
+
+- Ending game:
+
+![Game Screenshot](so_long/maps/images/game_ending_with_bonus.png)
 
 ## 🏷 Credits
 This project is part of the 42 school curriculum. It was developed using the MiniLibX library. Special thanks to the 42 community for their support and resources.
